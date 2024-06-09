@@ -29,7 +29,7 @@ const posts = [
     }
 ]
 
-
+// render posts
 const newPostEl = document.getElementById("new-post")
 
 for (let i = 0; i < posts.length; i++) {
