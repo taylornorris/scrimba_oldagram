@@ -46,7 +46,11 @@ p {
 }
 
 .icon {
-    width: 24px;
+    width: 26px;
+}
+
+.icon:hover {
+    opacity: 0.5;
 }
 
 /* wrapper */
@@ -58,7 +62,6 @@ p {
 /* header */
 header {
     height: 67px;
-    border-bottom: 1px solid #C6C6C6;
 }
 
 .header-div {
@@ -67,9 +70,12 @@ header {
     align-items: center;
 }
 
+/* post content */
+
 /* user info */
 .user-info-section {
     padding: 10px 0;
+    border-top: 1px solid #C6C6C6;
 }
 
 .user-info-div {
@@ -81,17 +87,18 @@ header {
 }
 
 /* post image */
-.post-img-section, #post-img {
-    height: 375px;
+.post-img {
+    width: 100%;
 }
 
 /* post body */
 .body-div {
     height: 78px;
-    margin-top: 18px;
+    padding-top: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .icons-div {
@@ -99,6 +106,7 @@ header {
     gap: 12px;
 }
 
-.likes-div, .caption-div {
-    padding-left: 3px;
+.likes-div, 
+.caption-div {
+    padding-left: 4px;
 }
