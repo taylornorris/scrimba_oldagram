@@ -29,3 +29,43 @@ const posts = [
     }
 ]
 
+
+const newPostEl = document.getElementById("new-post")
+
+for (let i = 0; i < posts.length; i++) {
+
+    const postContent = posts[i] 
+    const newPost = document.createElement("article")
+
+    newPost.innerHTML = `
+                        <section class="user-info-section">
+                            <div class="container user-info-div">
+                                <img class="avatar" src="${postContent.avatar}">
+                                <div class="user-info-text">
+                                    <p class="bold">${postContent.name}</p>
+                                    <p class="small-text">${postContent.location}</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <img class="post-img" src="${postContent.post}" alt="${postContent.alt}">
+
+                        <section class="post-body">
+                            <div class="container body-div">
+                                <div class="icons-div">
+                                    <img class="icon" src="images/icon-heart.png">
+                                    <img class="icon" src="images/icon-comment.png">
+                                    <img class="icon" src="images/icon-dm.png">
+                                </div>
+                                <div class="likes-div">
+                                    <P class="bold">${postContent.likes} likes</P>
+                                </div>
+                                <div class="caption-div">
+                                    <p><span class="bold">${postContent.username}</span> ${postContent.comment}</p>
+                                </div>
+                            </div>
+                        </section>
+    `
+
+    newPostEl.append(newPost)
+}
